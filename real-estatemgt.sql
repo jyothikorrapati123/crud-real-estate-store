@@ -70,3 +70,63 @@ inner join class.addressmapping as adm on prt.id=adm.propertyid;
 
 select*from class.propertytype as prt
 inner join class.addressmapping as adm on prt.id=adm.addressid;
+
+call save_propertytype(5,'villa','description');
+
+select* from propertytype;
+
+select* from propertytype where id=1;
+
+update propertytype set type='Apartment' where id =1;
+
+delete from propertytype where id=1;
+
+select*from propertytype order by type desc;
+
+select*from propertytype order by type asc;
+
+
+call save_property(4,'aruna','200inches');
+
+select*from property;
+
+select*from property where id=2;
+
+update property set name='akkhi'where id=1;
+
+delete from property where name='apartment';
+
+
+select*from property order by dimensions desc;
+
+call save_address(4,'srnagar','forummall','telangana','india',500000);
+
+select*from address;
+
+select*from address where id=3;
+
+update address set street='arrgadda' where id=1;
+
+delete from address where street='srnagar';
+
+select*from address order by landmark desc;
+
+select*from address order by street asc;
+
+
+
+call save_addressmapping(3, 2, 2);
+
+
+update addressmapping set addressid=2;
+
+select*from addressmapping;
+
+select*from addressmapping where id=1;
+
+delete from addressmapping where propertyid=1;
+
+select *from addressmapping order by propertyid desc;
+select*from addressmapping order by addressid asc;
+
+
